@@ -1,0 +1,10 @@
+on:
+  push:
+jobs:
+  Builds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: ./gradlew run
+        with:
+          java-version: 17

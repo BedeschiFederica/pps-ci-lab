@@ -6,5 +6,10 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    add("implementation", "org.scala-lang:scala3-library_3:3.6.4")
+    implementation("org.scala-lang:scala3-library_3:3.6.4")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.1")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+tasks.named<Test>("test") {
+    useJUnitPlatform()
 }
